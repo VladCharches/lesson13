@@ -22,13 +22,13 @@ $ yum -y install foreman-installer
 
 $ foreman-installer
 
-## I recieved a problem with names server and client and i rename it to pserv and node1
+# I recieved a problem with names server and client and i rename it to pserv and node1
 
 **Client-side:**
 
 puppet agent --server pserv.minsk.epam.com -t
 
-##I created folders and new manifest, 
+# I created folders and new manifest, 
 $ mkdir /etc/puppetlabs/code/environments/prod
 $ mkdir /etc/puppetlabs/code/environments/prod/manifests
 
@@ -39,7 +39,7 @@ $ mkdir /etc/puppetlabs/code/environments/prod/manifests
 # Installed module mysql
 $ puppet module install puppetlabs-mysql --environment prod
 
-Also edited and add new environment 'prod' $ vi /etc/puppetlabs/puppet/[puppet.conf]() 
+Also edited and add new environment 'prod' $ vi /etc/puppetlabs/puppet/[puppet.conf](https://github.com/VladCharches/lesson13/blob/master/puppet.conf) 
 
 
 **Client-side:**
@@ -52,6 +52,6 @@ Screenshots:
 
 **Results**
 
-![1](https://github.com/VladCharches/lesson13/blob/master/screens/1.png)
-![2](https://github.com/VladCharches/lesson13/blob/master/screens/2.png)
-![3](https://github.com/VladCharches/lesson13/blob/master/screens/3.png)
+![1](https://github.com/VladCharches/lesson13/blob/master/Screens/1.png)
+![2](https://github.com/VladCharches/lesson13/blob/master/Screens/2.png)
+![3](https://github.com/VladCharches/lesson13/blob/master/Screens/3.png)
