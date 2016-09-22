@@ -10,7 +10,7 @@ MTN.*NIX.11 Automated Environment Configuration Management
 **1. I edited 2 Vagrantfiles. Run it with edited files "host" on client VM. You can check it below**
 
 [Vagrantfile-client](https://github.com/VladCharches/lesson13/blob/master/Vagrant_Client)
-[Vagrantfile-server](https://github.com/VladCharches/lesson13/blob/master/Vagrantfile_server)
+[Vagrantfile-server](https://github.com/VladCharches/lesson13/blob/master/Vagrant_Server)
 
 **Server-side (All operations we should do on root)** 
 
@@ -22,7 +22,7 @@ $ yum -y install foreman-installer
 
 $ foreman-installer
 
-# I recieved a problem with names server and client and i rename it to pserv and node1
+**2. I recieved a problem with names server and client and I rename it to pserv and node1**
 
 **Client-side:**
 
@@ -32,19 +32,19 @@ puppet agent --server pserv.minsk.epam.com -t
 $ mkdir /etc/puppetlabs/code/environments/prod
 $ mkdir /etc/puppetlabs/code/environments/prod/manifests
 
-# I created manifest $ vi /etc/puppetlabs/code/environments/prod/manifests/site.pp
+**3. I created manifest $ vi /etc/puppetlabs/code/environments/prod/manifests/site.pp**
 
 # My manifest [site.pp](https://github.com/VladCharches/lesson13/blob/master/site.pp) 
 
-# Installed module mysql
+**4. Installed module mysql**
 $ puppet module install puppetlabs-mysql --environment prod
 
-Also edited and add new environment 'prod' $ vi /etc/puppetlabs/puppet/[puppet.conf](https://github.com/VladCharches/lesson13/blob/master/puppet.conf) 
+**5. Also edited and add new environment 'prod' $ vi /etc/puppetlabs/puppet/[puppet.conf](https://github.com/VladCharches/lesson13/blob/master/puppet.conf)** 
 
 
 **Client-side:**
 
-puppet agent --server pserv.minsk.epam.com -t --environment prod |tee /vagrant/outlog.log
+**6. puppet agent --server pserv.minsk.epam.com -t --environment prod |tee /vagrant/outlog.log**
 
 [output.log](https://github.com/VladCharches/lesson13/blob/master/outlog.log)
 
